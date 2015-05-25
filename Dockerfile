@@ -29,6 +29,7 @@ ENV GRAPHITE_STORAGE_DIR /data/carbon/data
 EXPOSE 2003 2004 7002
 
 COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod 750 /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Default command
