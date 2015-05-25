@@ -33,4 +33,4 @@ RUN chmod 750 /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Default command
-CMD carbon-cache --instance=a --debug start
+CMD [ "carbon-cache", "--debug", "start" ]
