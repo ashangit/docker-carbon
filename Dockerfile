@@ -28,5 +28,8 @@ ENV GRAPHITE_STORAGE_DIR /data/carbon/data
 # Expose carbon port
 EXPOSE 2003 2004 7002
 
+COPY docker-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 # Default command
-CMD carbon-cache --debug start
+CMD carbon-cache --instance=a --debug start
